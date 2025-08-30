@@ -7,8 +7,8 @@ import Converter from './components/converter'
 function App() {
 
     const [amount, setAmount] = useState(0)
-    const [from, setFrom] = useState("usd")
-    const [to, setTo] = useState("inr")
+    const [from, setFrom] = useState("inr")
+    const [to, setTo] = useState("usd")
     const [convertedAmount, setConvertedAmount] = useState(0)
 
     const currencyInfo = useCurrencyInfo(from)
@@ -34,8 +34,8 @@ function App() {
             }}
         >
             <div className="flex flex-col gap-6 mx-3">
-                <Converter />
-                <Converter />
+                <Converter x="usd" y="inr" />
+                <Converter x="inr" y="usd" />
             </div>
         </div>
     );

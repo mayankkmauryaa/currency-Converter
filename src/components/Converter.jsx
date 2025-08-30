@@ -2,11 +2,11 @@ import { useState } from 'react'
 import InputBox from './InputBox'
 import useCurrencyInfo from '../hooks/useCurrencyInfo'
 
-function Converter() {
-
+function Converter({x , y}) {
+    console.log(x, y);
     const [amount, setAmount] = useState(0)
-    const [from, setFrom] = useState("usd")
-    const [to, setTo] = useState("inr")
+    const [from, setFrom] = useState(x)
+    const [to, setTo] = useState(y)
     const [convertedAmount, setConvertedAmount] = useState(0)
 
     const currencyInfo = useCurrencyInfo(from)
@@ -28,8 +28,8 @@ function Converter() {
     const reset = () => {
         setAmount(0)
         setConvertedAmount(0)
-        setFrom("usd")
-        setTo("inr")
+        setFrom(x)
+        setTo(y)
     }
 
     return (
