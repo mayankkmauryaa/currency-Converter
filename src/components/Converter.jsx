@@ -3,7 +3,7 @@ import InputBox from './InputBox'
 import useCurrencyInfo from '../hooks/useCurrencyInfo'
 
 function Converter({x , y}) {
-    console.log(x, y);
+    // console.log(x, y);
     const [amount, setAmount] = useState(0)
     const [from, setFrom] = useState(x)
     const [to, setTo] = useState(y)
